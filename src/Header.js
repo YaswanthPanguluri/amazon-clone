@@ -1,11 +1,12 @@
 import React from "react";
 import "./Header.css";
+import Checkout from "./Checkout";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 function Header() {
   return (
     <nav className="header">
-      {/* Logo image on the left */}
       <Link to="/login">
         <img
           className="header__logo"
@@ -13,45 +14,44 @@ function Header() {
           alt="logo"
         />
       </Link>
-      {/* Search Box */}
       <div className="header__search">
         <input type="text" className="header__searchInput"></input>
         <SearchIcon className="header__searchIcon" />
       </div>
 
-      {/* 1st Link */}
-
       <div className="header__nav">
         <Link to="/login" className="header__link">
           <div className="header__option">
-            <span>Hai yaswanth</span>
-            <span>Sign In</span>
+            <span className="header__optionLineOne">Hai yaswanth</span>
+            <span className="header__optionLineTwo">Sign In</span>
           </div>
         </Link>
 
-        {/* 2nd Link */}
         <Link to="/" className="header__link">
           <div className="header__option">
-            <span>Returns</span>
-            <span>& orders</span>
+            <span className="header__optionLineOne">Returns</span>
+            <span className="header__optionLineTwo">& orders</span>
           </div>
         </Link>
-        {/* 3rd Link */}
         <Link to="/login" className="header__link">
           <div className="header__option">
-            <span>Your</span>
-            <span>Prime</span>
+            <span className="header__optionLineOne">Your</span>
+            <span className="header__optionLineTwo">Prime</span>
           </div>
         </Link>
-        {/* 4th Link */}
         <Link to="/login" className="header__link">
           <div className="header__option">
-            <span>Hai yaswanth</span>
-            <span>Sign In</span>
+            <span className="header__optionLineOne">Hai yaswanth</span>
+            <span className="header__optionLineTwo">Sign In</span>
           </div>
         </Link>
       </div>
-      {/* Bhasket icon with number */}
+      <Link to="/Checkout" className="header__link">
+        <div className="header__optionBasket">
+          <ShoppingBasketIcon />
+          <span className="header__optionLineTwo header__BasketCount">0</span>
+        </div>
+      </Link>
     </nav>
   );
 }
