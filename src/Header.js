@@ -1,13 +1,12 @@
 import React from "react";
 import "./Header.css";
-import Checkout from "./Checkout";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 function Header() {
   return (
     <nav className="header">
-      <Link to="/login">
+      <Link to="/">
         <img
           className="header__logo"
           src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
